@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Dominio", "1 - Dominio", "{7565F205-8EF5-43D2-89B8-C8183DDC1C32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Aplicacao", "2 - Aplicacao", "{7222FCE7-AB39-4270-BC2E-2F1891D3CAA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Repositorio", "3 - Repositorio", "{13A842AB-3FB4-48D1-844E-E21EE236A3D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - API", "4 - API", "{9127286A-FC9B-4040-A170-64EC94C3EF6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalCar.Dominio", "DigitalCar.Dominio\DigitalCar.Dominio.csproj", "{FC9ED849-D2FD-4773-B7CA-E55068308FD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalCar.Aplicacao", "DigitalCar.Aplicacao\DigitalCar.Aplicacao.csproj", "{DA79F24B-4F17-4A90-9A4D-FBFEEC232B40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalCar.RepositorioADO", "DigitalCar.Repositorio\DigitalCar.RepositorioADO.csproj", "{F9F1095B-C234-44D1-919C-1D4C87D839D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalCar.API", "DigitalCar.API\DigitalCar.API.csproj", "{78ADF8C8-C989-4968-83D3-5007819AB023}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC9ED849-D2FD-4773-B7CA-E55068308FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9ED849-D2FD-4773-B7CA-E55068308FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9ED849-D2FD-4773-B7CA-E55068308FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9ED849-D2FD-4773-B7CA-E55068308FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA79F24B-4F17-4A90-9A4D-FBFEEC232B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA79F24B-4F17-4A90-9A4D-FBFEEC232B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA79F24B-4F17-4A90-9A4D-FBFEEC232B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA79F24B-4F17-4A90-9A4D-FBFEEC232B40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F1095B-C234-44D1-919C-1D4C87D839D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F1095B-C234-44D1-919C-1D4C87D839D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F1095B-C234-44D1-919C-1D4C87D839D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F1095B-C234-44D1-919C-1D4C87D839D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78ADF8C8-C989-4968-83D3-5007819AB023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78ADF8C8-C989-4968-83D3-5007819AB023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78ADF8C8-C989-4968-83D3-5007819AB023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78ADF8C8-C989-4968-83D3-5007819AB023}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC9ED849-D2FD-4773-B7CA-E55068308FD5} = {7565F205-8EF5-43D2-89B8-C8183DDC1C32}
+		{DA79F24B-4F17-4A90-9A4D-FBFEEC232B40} = {7222FCE7-AB39-4270-BC2E-2F1891D3CAA2}
+		{F9F1095B-C234-44D1-919C-1D4C87D839D4} = {13A842AB-3FB4-48D1-844E-E21EE236A3D1}
+		{78ADF8C8-C989-4968-83D3-5007819AB023} = {9127286A-FC9B-4040-A170-64EC94C3EF6E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86AA53F5-1B91-4058-A77F-04E11055E7CB}
+	EndGlobalSection
+EndGlobal

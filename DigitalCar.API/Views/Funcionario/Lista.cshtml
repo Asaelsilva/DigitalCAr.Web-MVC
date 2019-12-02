@@ -1,0 +1,62 @@
+﻿@model IEnumerable<DigitalCar.Dominio.Entidade.Funcionario>
+
+<div class="well form-inline">
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <table class="table @*table-responsive*@">
+                <tr>
+                    <th><strong>Nome</strong></th>
+
+                    <th><strong>E-mail</strong></th>
+
+                    <th><strong>Função</strong></th>
+
+                    <th><strong>Status</strong> </th>
+
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Funcao)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+
+                        <td style="width: 140px">
+                            @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                            @Html.ActionLink("Detalhe", "DetalharCadastro", new { id = item.Id }) 
+                            @*@Html.ActionLink("Excluir", "Excluir", new { id = item.Id })*@
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+            <style>
+                .table > tbody > tr > th {
+                    border-top: 0px transparent solid;
+                }
+            </style>
+        </div>
+
+    </div>
+
+</div>

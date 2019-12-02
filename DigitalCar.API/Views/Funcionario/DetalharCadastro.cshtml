@@ -1,0 +1,240 @@
+﻿@model DigitalCar.Dominio.Entidade.Funcionario
+
+
+<div class="no-print">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4 no-print">
+            <h1 class="page-title txt-color-blueDark">
+                Dados
+                <span><i class="ace-icon fa fa-angle-double-right"></i> Cadastraris</span>
+            </h1>
+        </div>
+    </div>
+    
+</div>
+
+
+<div class="well form-inline">
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <table class="table @*table-responsive*@">
+                <tr>
+                    <th><strong>Nome</strong></th>
+                    <th><strong>CPF</strong></th>
+                    <th><strong>Rg</strong></th>
+                    <th><strong>Dt.Nasci</strong> </th>
+                    <th><strong>E-mail</strong> </th>
+                    <th><strong>Telefone</strong> </th>
+                    <th><strong>Celular</strong> </th>
+                    <th><strong>Turno</strong> </th>
+                    <th><strong>Função</strong> </th>
+                    <th><strong>Status</strong> </th>
+                    <th><strong>CEP</strong> </th>
+                    <th><strong>UF</strong> </th>
+                    <th><strong>Cidade</strong> </th>
+                    <th><strong>Rua</strong> </th>
+                    <th><strong>N°</strong> </th>
+                    <th><strong>Bairro</strong> </th>
+
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td>@Html.DisplayFor(model => model.Nome)</td>
+                    <td>@Html.DisplayFor(model => model.Cpf)</td>
+                    <td>@Html.DisplayFor(model => model.Rg)</td>
+                    <td>@Html.DisplayFor(model => model.DataNascimento)</td>
+                    <td>@Html.DisplayFor(model => model.Email)</td>
+                    <td>@Html.DisplayFor(model => model.Telefone)</td>
+                    <td>@Html.DisplayFor(model => model.Celular)</td>
+                    <td> @Html.DisplayFor(model => model.Turno)</td>
+                    <td>@Html.DisplayFor(model => model.Funcao)</td>
+                    <td>@Html.DisplayFor(model => model.Status)</td>
+                    <td>@Html.DisplayFor(model => model.Cep)</td>
+                    <td>@Html.DisplayFor(model => model.UF)</td>
+                    <td>@Html.DisplayFor(model => model.Cidade)</td>
+                    <td>@Html.DisplayFor(model => model.Rua)</td>
+                    <td>@Html.DisplayFor(model => model.Numero)</td>
+                    <td>@Html.DisplayFor(model => model.Bairro)</td>
+
+
+
+
+                    @*<td style="width: 200px">
+                            @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                            @Html.ActionLink("Detalhe", "DetalharCadastro", new { id = item.Id }) |
+                            @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
+                        </td>*@
+                </tr>
+
+
+            </table>
+
+            <style>
+                .table > tbody > tr > th {
+                    border-top: 0px transparent solid;
+                }
+            </style>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="form-group">
+
+    <button class="btn btn-info" style="margin-left: 20px">
+        @Html.ActionLink("Editar", "Editar", new { id = Model.Id })
+    </button>
+    <button class="btn btn-default" style="margin-left: 20px">
+        @Html.ActionLink("voltar", "Funcionario")
+    </button>
+
+</div>
+
+
+@*<p>
+        @Html.ActionLink("Editar", "Editar", new { id = Model.Id }) |
+        @Html.ActionLink("voltar", "Funcionario")
+    </p>*@
+
+
+@*<div class="hidden-sm hidden-md hidden-lg">
+        <h4>Funcionario</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt >
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cpf)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Rg)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Rg)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DataNascimento)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Telefone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Celular)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Celular)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Rua)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Rua)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Turno)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Turno)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Funcao)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Funcao)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Numero)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Numero)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Bairro)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Bairro)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cidade)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Cep)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cep)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UF)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UF)
+            </dd>
+
+        </dl>
+    </div>*@
+

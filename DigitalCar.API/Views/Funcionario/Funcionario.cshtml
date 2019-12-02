@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DigitalCar.Dominio.Entidade.Funcionario>
+
+@*<p>
+    @Html.ActionLink("Cadastrar Novo Funcionario", "CadastrarFuncionario")
+</p>*@
+
+
+<div class="no-print">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4 no-print">
+            <h1 class="page-title txt-color-blueDark">
+                Lista de
+                <span><i class="ace-icon fa fa-angle-double-right"></i> Funcionario</span>
+            </h1>
+        </div>
+    </div>
+    <br />
+    @{ Html.RenderPartial("~/Views/Funcionario/Lista.cshtml"); }
+</div>
+

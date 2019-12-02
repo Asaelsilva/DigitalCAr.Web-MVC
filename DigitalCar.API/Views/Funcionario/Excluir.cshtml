@@ -1,0 +1,100 @@
+﻿@model DigitalCar.Dominio.Entidade.Funcionario
+
+
+<div class="no-print">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4 no-print">
+            <h1 class="page-title txt-color-blueDark">
+                <span><i class="ace-icon fa fa-angle-double-right"></i> Funcionario</span>
+            </h1>
+        </div>
+    </div>
+    <br />
+    @*@{ Html.RenderPartial("~/Views/Funcionario/Lista.cshtml"); }*@
+</div>
+
+
+<div class="well form-inline">
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <table class="table @*table-responsive*@">
+                <tr>
+                    <th><strong>Nome</strong></th>
+                    <th><strong>CPF</strong></th>
+                    <th><strong>Rg</strong></th>
+                    <th><strong>Dt.Nasci</strong> </th>
+                    <th><strong>E-mail</strong> </th>
+                    <th><strong>Telefone</strong> </th>
+                    <th><strong>Celular</strong> </th>
+                    <th><strong>Turno</strong> </th>
+                    <th><strong>Função</strong> </th>
+                    <th><strong>Status</strong> </th>
+                    <th><strong>CEP</strong> </th>
+                    <th><strong>UF</strong> </th>
+                    <th><strong>Cidade</strong> </th>
+                    <th><strong>Rua</strong> </th>
+                    <th><strong>N°</strong> </th>
+                    <th><strong>Bairro</strong> </th>
+
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td>@Html.DisplayFor(model => model.Nome)</td>
+                    <td>@Html.DisplayFor(model => model.Cpf)</td>
+                    <td>@Html.DisplayFor(model => model.Rg)</td>
+                    <td>@Html.DisplayFor(model => model.DataNascimento)</td>
+                    <td>@Html.DisplayFor(model => model.Email)</td>
+                    <td>@Html.DisplayFor(model => model.Telefone)</td>
+                    <td>@Html.DisplayFor(model => model.Celular)</td>
+                    <td> @Html.DisplayFor(model => model.Turno)</td>
+                    <td>@Html.DisplayFor(model => model.Funcao)</td>
+                    <td>@Html.DisplayFor(model => model.Status)</td>
+                    <td>@Html.DisplayFor(model => model.Cep)</td>
+                    <td>@Html.DisplayFor(model => model.UF)</td>
+                    <td>@Html.DisplayFor(model => model.Cidade)</td>
+                    <td>@Html.DisplayFor(model => model.Rua)</td>
+                    <td>@Html.DisplayFor(model => model.Numero)</td>
+                    <td>@Html.DisplayFor(model => model.Bairro)</td>
+
+
+
+
+                    @*<td style="width: 200px">
+                            @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                            @Html.ActionLink("Detalhe", "DetalharCadastro", new { id = item.Id }) |
+                            @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
+                        </td>*@
+                </tr>
+
+
+            </table>
+
+            <style>
+                .table > tbody > tr > th {
+                    border-top: 0px transparent solid;
+                }
+            </style>
+        </div>
+
+    </div>
+</div>
+<h3>Certeza que deseja excluir Funcionario da base de dados??</h3>
+
+<div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <input type="submit" value="Excluir" class="btn btn-info" />
+            <button class="btn btn-default" style="margin-left: 20px">
+                @Html.ActionLink("Voltar", "Funcionario")
+            </button>
+        </div>
+    }
+</div>
