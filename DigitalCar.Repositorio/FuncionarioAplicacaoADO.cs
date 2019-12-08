@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using DigitalCar.Dominio.Contrato;
 using DigitalCar.Dominio.Entidade;
 
 namespace DigitalCar.RepositorioADO
 {
-    public class FuncionarioAplicacaoADO
+    public class FuncionarioAplicacaoADO : IRepositorio<Funcionario>
     {
 
         private bd bd;
@@ -66,16 +67,16 @@ namespace DigitalCar.RepositorioADO
             }
         }
 
-        public void Excluir(int id)
+        public void Excluir(Funcionario funcionario)
         {
             using (bd = new bd())
             {
-                var strQuery = string.Format("DELETE  FROM Funcionario WHERE codigoId = {0}", id);
+                var strQuery = string.Format("DELETE  FROM Funcionario WHERE codigoId = {0}", funcionario.Id);
                 bd.ExecutaComnado(strQuery);
             }
         }
 
-        public List<Funcionario> Lista()
+        public IEnumerable<Funcionario> Lista()
         {
             using (bd = new bd())
             {
@@ -85,7 +86,7 @@ namespace DigitalCar.RepositorioADO
             }
         }
 
-        public Funcionario ListaPorId(int id)
+        public Funcionario ListaPorId(string id)
         {
             using (bd = new bd())
             {

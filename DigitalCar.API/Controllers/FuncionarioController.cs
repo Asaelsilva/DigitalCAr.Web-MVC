@@ -14,7 +14,7 @@ namespace DigitalCar.API.Controllers
 
         public ActionResult Funcionario()
         {
-            var appFuncionario = new FuncionarioAplicacao();
+            var appFuncionario = FuncionarioAplicacaoConstrutor.FuncionarioApADO();
             var listaFuncionario = appFuncionario.Lista();
 
             return View(listaFuncionario);
@@ -33,7 +33,7 @@ namespace DigitalCar.API.Controllers
             
             if (ModelState.IsValid)
             {
-                var appFuncionario = new FuncionarioAplicacao();
+                var appFuncionario = FuncionarioAplicacaoConstrutor.FuncionarioApADO();
                 appFuncionario.Salvar(funcionario);
                 return RedirectToAction("Funcionario");
             }
@@ -41,9 +41,9 @@ namespace DigitalCar.API.Controllers
             return View(funcionario);
         }
 
-        public ActionResult Editar(int id )
+        public ActionResult Editar(string id )
         {
-            var appFuncionario = new FuncionarioAplicacao();
+            var appFuncionario = FuncionarioAplicacaoConstrutor.FuncionarioApADO();
             var funcionario = appFuncionario.ListaPorId(id);
 
             if (funcionario == null)
@@ -59,7 +59,7 @@ namespace DigitalCar.API.Controllers
         {
             if (ModelState.IsValid)
             {
-                var appFuncionario = new FuncionarioAplicacao();
+                var appFuncionario = FuncionarioAplicacaoConstrutor.FuncionarioApADO();
                 appFuncionario.Salvar(funcionario);
                 return RedirectToAction("Funcionario");
             }
@@ -67,9 +67,9 @@ namespace DigitalCar.API.Controllers
             return View(funcionario);
         }
 
-        public ActionResult DetalharCadastro(int id)
+        public ActionResult DetalharCadastro(string id)
         {
-            var appFuncionario = new FuncionarioAplicacao();
+            var appFuncionario = FuncionarioAplicacaoConstrutor.FuncionarioApADO();
             var funcionario = appFuncionario.ListaPorId(id);
 
             if (funcionario == null)
@@ -80,9 +80,9 @@ namespace DigitalCar.API.Controllers
             return View(funcionario);
         }
 
-        public ActionResult Excluir(int id)
+        public ActionResult Excluir(string id)
         {
-            var appFuncionario = new FuncionarioAplicacao();
+            var appFuncionario = FuncionarioAplicacaoConstrutor.FuncionarioApADO();
             var funcionario = appFuncionario.ListaPorId(id);
 
             if (funcionario == null)
@@ -94,10 +94,11 @@ namespace DigitalCar.API.Controllers
         }
 
         [HttpPost, ActionName("Excluir")]
-        public ActionResult ExcluirConfirmado(int id)
+        public ActionResult ExcluirConfirmado(string id)
         {
-            var appFuncionario = new FuncionarioAplicacao();
-            appFuncionario.Excluir(id);
+            var appFuncionario = FuncionarioAplicacaoConstrutor.FuncionarioApADO();
+            var funcionario = appFuncionario.ListaPorId(id);
+            appFuncionario.Excluir(funcionario);
             return RedirectToAction("Funcionario");
         }
 
