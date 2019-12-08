@@ -23,12 +23,14 @@ namespace DigitalCar.API.Controllers
         public ActionResult CadastrarFuncionario()
         {
 
+
             return View();
         }
 
         [HttpPost]
         public ActionResult CadastrarFuncionario(Funcionario funcionario)
         {
+            
             if (ModelState.IsValid)
             {
                 var appFuncionario = new FuncionarioAplicacao();
@@ -98,5 +100,7 @@ namespace DigitalCar.API.Controllers
             appFuncionario.Excluir(id);
             return RedirectToAction("Funcionario");
         }
+
     }
+ 
 }
