@@ -11,6 +11,7 @@ namespace DigitalCar.Dominio.Entidade
     public class Funcionario
     {
         public int Id { get; set; }
+
         [DisplayName ("Nome")]
         [Required(ErrorMessage = "Nome Obrigatorio")]
         public string Nome { get; set; }

@@ -12,9 +12,9 @@ namespace DigitalCar.Aplicacao
     {
         //private readonly FuncionarioAplicacaoADO repositorio;
         private readonly IRepositorio<Funcionario> repositorio;
-        public FuncionarioAplicacao(IRepositorio<Funcionario>repositorio)
+        public FuncionarioAplicacao(IRepositorio<Funcionario>repo)
         {
-            repositorio = repositorio;
+            repositorio = repo;
         }
 
         public void Salvar(Funcionario funcionario)

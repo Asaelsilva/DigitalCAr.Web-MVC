@@ -14,9 +14,9 @@ namespace DigitalCar.RepositorioEF
 
         public FuncionarioRepositorioEF()
         {
-            bd = new RepositorioEF.BD();
+            bd = new BD();
         }
-
+         
         public void Excluir(Funcionario entidade)
         {
             var funcionarioExcluir = bd.funcionario.First(x => x.Id == entidade.Id);
@@ -41,6 +41,7 @@ namespace DigitalCar.RepositorioEF
             if (entidade.Id > 0)
             {
                 var funcionarioAlterar = bd.funcionario.First(x => x.Id == entidade.Id);
+                
                 funcionarioAlterar.Nome = entidade.Nome;
                 funcionarioAlterar.Cpf = entidade.Cpf;
                 funcionarioAlterar.Rg = entidade.Rg;
