@@ -50,6 +50,10 @@
       <Project>{fc9ed849-d2fd-4773-b7ca-e55068308fd5}</Project>
       <Name>DigitalCar.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DigitalCar.RepositorioEF\DigitalCar.RepositorioEF.csproj">
+      <Project>{e3f51d1b-9db7-4c37-8135-b89959714db9}</Project>
+      <Name>DigitalCar.RepositorioEF</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DigitalCar.Repositorio\DigitalCar.RepositorioADO.csproj">
       <Project>{f9f1095b-c234-44d1-919c-1d4c87d839d4}</Project>
       <Name>DigitalCar.RepositorioADO</Name>

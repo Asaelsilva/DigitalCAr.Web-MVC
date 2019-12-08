@@ -51,12 +51,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="ConfiguracaoEF.cs" />
+    <Compile Include="FuncionarioRepositorioEF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DigitalCar.Dominio\DigitalCar.Dominio.csproj">
+      <Project>{fc9ed849-d2fd-4773-b7ca-e55068308fd5}</Project>
+      <Name>DigitalCar.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

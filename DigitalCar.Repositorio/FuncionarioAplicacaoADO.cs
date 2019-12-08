@@ -47,7 +47,7 @@ namespace DigitalCar.RepositorioADO
             strQuery += string.Format("rua = '{0}',", funcionario.Rua);
             strQuery += string.Format("numero = '{0}',", funcionario.Numero);
             strQuery += string.Format("bairro = '{0}' ", funcionario.Bairro);
-            strQuery += string.Format("WHERE codigoId = '{0}'", funcionario.Id);
+            strQuery += string.Format("WHERE Id = '{0}'", funcionario.Id);
 
             using (bd = new bd())
             {
@@ -71,7 +71,7 @@ namespace DigitalCar.RepositorioADO
         {
             using (bd = new bd())
             {
-                var strQuery = string.Format("DELETE  FROM Funcionario WHERE codigoId = {0}", funcionario.Id);
+                var strQuery = string.Format("DELETE  FROM Funcionario WHERE Id = {0}", funcionario.Id);
                 bd.ExecutaComnado(strQuery);
             }
         }
@@ -90,7 +90,7 @@ namespace DigitalCar.RepositorioADO
         {
             using (bd = new bd())
             {
-                var strQuery = string.Format("SELECT * FROM Funcionario WHERE CodigoId = {0}", id);
+                var strQuery = string.Format("SELECT * FROM Funcionario WHERE Id = {0}", id);
                 var retorno = bd.ExecutaComandoComRetorno(strQuery);
                 return ReaderEmLista(retorno).FirstOrDefault();
             }
@@ -103,7 +103,7 @@ namespace DigitalCar.RepositorioADO
             {
                 var tempoObjeto = new Funcionario()
                 {
-                    Id = int.Parse(reader["codigoId"].ToString()),
+                    Id = int.Parse(reader["Id"].ToString()),
                     Nome = reader["nome"].ToString(),
                     Cpf = reader["cpf"].ToString(),
                     Rg = reader["rg"].ToString(),
